@@ -6,10 +6,10 @@ export class UserController {
     getAll(req, res) {
         try {
             const users = this.service.findAll()
-            return res.status(200).body({users})
+            return res.status(200).json({users})
         }
         catch(error) {
-            return res.status(400).body({message: error.message})
+            return res.status(400).json({message: error.message})
         }
     }
 
@@ -57,10 +57,10 @@ export class UserController {
 
         try {
             this.service.updatePassword(email, lastPassword, newPassword)
-            return res.status(200).body({message: 'Update Sucessfully'})
+            return res.status(200).json({message: 'Update Sucessfully'})
         }
         catch(error) {
-            return res.status(400).body({message: error.message})
+            return res.status(400).json({message: error.message})
         }
     }
 }
