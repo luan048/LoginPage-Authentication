@@ -15,7 +15,7 @@ export class UserDb {
         this.users.push(user)
     }
 
-    update(email, lastPassword, newPassword) {
+    updatePassword(email, lastPassword, newPassword) {
         const userIndex = this.users.findIndex((user) => user.email === email && user.password === lastPassword)
 
         if(userIndex === -1) throw new Error('Usuário não encontrado')
