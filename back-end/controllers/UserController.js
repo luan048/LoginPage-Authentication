@@ -1,5 +1,3 @@
-import { json } from "express"
-
 export class UserController {
     constructor(service) {
         this.service = service
