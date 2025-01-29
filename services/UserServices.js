@@ -12,7 +12,6 @@ export class AuthenticationUser {
 
     register(name, email, password) {
         const userExistis = this.database.findByEmail(email)
-
         if(userExistis) throw new Error("E-mail já cadastrado!")
 
         const newUser = new User({name, email, password})
@@ -24,8 +23,8 @@ export class AuthenticationUser {
 
     login(email, password) {
         const user = this.database.findByEmail(email)
-
         if(!user) throw new Error("Usuário não cadastrado")
+
         if(!bcrypt.compareSync(password, user.password)) throw new Error("Senha incorreta!")
         
         return {
@@ -34,16 +33,13 @@ export class AuthenticationUser {
         }
     }
 
-    updatePassword(email, lastPassword, newPassword) {
+    updatePassword(email, newPassword) {
         const userExistis = this.database.findByEmail(email)
-
         if(!userExistis) throw new Error("Email não cadastrado!")
-
-        if(!bcrypt.compareSync(lastPassword, userExistis.password)) throw new Error("Senha incorreta!")
         
         userExistis.password = bcrypt.hashSync(newPassword, 10)
 
-        this.database.updatePassword(userExistis)
-        return userExistis
+        this.database.updatePassword(email, userExistis.password)
+        return {...userExistis, password: undefined}
     }
 }

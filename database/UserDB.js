@@ -15,15 +15,12 @@ export class UserDb {
         this.users.push(user)
     }
 
-    updatePassword(email, lastPassword, newPassword) {
-        const userIndex = this.users.findIndex((user) => user.email === email && user.password === lastPassword)
+    updatePassword(email, newPassword) {
+        const userIndex = this.users.findIndex((user) => user.email === email)
 
         if(userIndex === -1) throw new Error('Usuário não encontrado')
 
-        this.users[userIndex] = {
-            ...this.users[userIndex],
-            password: newPassword
-        }
+        this.users[userIndex].password = newPassword
 
         return this.users[userIndex]
     }
