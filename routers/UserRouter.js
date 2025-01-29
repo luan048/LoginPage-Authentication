@@ -14,14 +14,12 @@ routers.get('/', async(req, res) => {
     return await userController.getAll(req, res)
 })
 
-routers.post('/registerUser', (req, res) => {
-    const {status, body} = userController.register(req, res)
-    res.status(status).json(body)
+routers.post('/registerUser', async (req, res) => {
+    return await userController.register(req, res)
 })
 
-routers.post('/loginUser', (req, res) => {
-    const {status, body} = userController.login(req, res)
-    res.status(status).json(body)
+routers.post('/loginUser', async (req, res) => {
+    return await userController.login(req, res)
 })
 
 routers.post('/updatePass', async(req, res) => {

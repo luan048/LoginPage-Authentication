@@ -1,3 +1,5 @@
+import { json } from "express"
+
 export class UserController {
     constructor(service) {
         this.service = service
@@ -18,17 +20,14 @@ export class UserController {
 
         try {
             const user = this.service.register(name, email, password)
-            return {
-                status: 200,
-                body: {
-                    id: user.id,
-                    name: user.name,
-                    email: user.email
-                }
-            }
+            return res.status(200).json({
+                id: user.id,
+                name: user.name,
+                email: user.email
+            })
         }
         catch(error) {
-            return res.status(400).body({message: error.message})
+            return res.status(400).json({message: error.message})
         }
     }
 
@@ -38,17 +37,14 @@ export class UserController {
         try {
             const {user} = this.service.login(email, password)
 
-            return {
-                status: 200,
-                body: {
-                    id: user.id,
-                    name: user.name,
-                    email: user.email
-                }
-            }
+            return res.status(200).json({
+                id: user.id,
+                name: user.name,
+                email: user.email
+            })
         }
         catch(error) {
-            return res.status(400).body({message: error.message})
+            return res.status(400).json({message: error.message})
         }
     }
 
