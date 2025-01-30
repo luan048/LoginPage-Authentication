@@ -1,57 +1,85 @@
+body {
+    background: linear-gradient(135deg, #e0aaff, #5078f2);
+    min-height: 74vh; /* Ocupa toda a tela */
+}
+
 .general-div {
     display: flex;
     flex-direction: column;
+    margin: auto;
     align-items: center;
     margin-top: 25vh;
     font-family: 'Arial', sans-serif;
+    width: 510px;
+    height: 410px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
 .entrar {
     font-size: 30px;
+    color: white;
 }
 
 /*Inputs Section*/
 .input-divs {
-    margin-bottom: 50px;
+    margin-bottom: 100px;
+    margin-top: 60px;
+    margin-left: 23%;
 }
 
 .input-email, 
 .input-password {
-    margin-left: 15px;
-    width: 300px;
+    width: 287px;
+    height: 40px;
     outline: none;
-    border-radius: 10px;
-    border: 1px solid black;
+    border: none;
+    background-color: #6D85AF;
+    margin-bottom: 13px;
+    font-size: 20px;
+    color: white;
 }
 
-.input-email:focus, 
-.input-password:focus {
-    border: 2px solid black;
+.input-email::placeholder, .input-password::placeholder {
+    color: white;
+    opacity: 0.5;
+    font-size: 20px;
+}
+
+.fa-user {
+}
+
+.fa-lock {
 }
 /*Fim Inputs Section*/
 
-.login-button {
+.login-button,
+.signup-button {
     width: 200px;
     height: 50px;
-    font-size: 20px;
     cursor: pointer;
     border-radius: 20px;
-    border: 1px solid gray;
-    margin-bottom: 150px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.login-button:hover, .signup-button:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
 }
 
 .extra-buttons {
     display: flex;
-    gap: 300px;
-}
-
-.signup-button {
-    width: 120px;
-    height: 40px;
-    border-radius: 15px;
-    border: 1px solid gray;
+    gap: 180px;
 }
 
 .forgot-password {
-    margin-top: 20px;
+    margin-bottom: 90px;
 }
