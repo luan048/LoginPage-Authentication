@@ -1,0 +1,57 @@
+.general-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25vh;
+    font-family: 'Arial', sans-serif;
+}
+
+.entrar {
+    font-size: 30px;
+}
+
+/*Inputs Section*/
+.input-divs {
+    margin-bottom: 50px;
+}
+
+.input-email, 
+.input-password {
+    margin-left: 15px;
+    width: 300px;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.input-email:focus, 
+.input-password:focus {
+    border: 2px solid black;
+}
+/*Fim Inputs Section*/
+
+.login-button {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid gray;
+    margin-bottom: 150px;
+}
+
+.extra-buttons {
+    display: flex;
+    gap: 300px;
+}
+
+.signup-button {
+    width: 120px;
+    height: 40px;
+    border-radius: 15px;
+    border: 1px solid gray;
+}
+
+.forgot-password {
+    margin-top: 20px;
+}
