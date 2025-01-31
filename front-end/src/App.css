@@ -44,17 +44,48 @@ body {
     color: white;
 }
 
-.input-email::placeholder, .input-password::placeholder {
+.input-email::placeholder, 
+.input-password::placeholder {
     color: white;
     opacity: 0.5;
     font-size: 20px;
 }
 
-.fa-user {
+/*Icons*/
+.span-icon-user, 
+.span-icon-password {
+    position: absolute;
+    margin-left: -35px;
+    height: 42px;
+    width: 35px;
+    background-color: #02254f;
 }
 
+.fa-user,
 .fa-lock {
+    color: white;
+    margin-top: 12px;
+    margin-left: 10px;
 }
+
+.fa-eye {
+    position: absolute;
+    color: white;
+    margin-left: -24px;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+.fa-eye-slash {
+    position: absolute;
+    color: white;
+    margin-left: -24px;
+    margin-top: 12px;
+    cursor: pointer;
+    visibility: hidden;
+}
+/*Fim Icons*/
+
 /*Fim Inputs Section*/
 
 .login-button,
@@ -82,4 +113,8 @@ body {
 
 .forgot-password {
     margin-bottom: 90px;
+}
+
+.forgot-password:hover {
+    color: black;
 }
