@@ -1,6 +1,6 @@
 body {
     background: linear-gradient(135deg, #e0aaff, #5078f2);
-    min-height: 74vh; /* Ocupa toda a tela */
+    min-height: 79vh; /* Ocupa toda a tela */
 }
 
 .general-div {
@@ -8,7 +8,7 @@ body {
     flex-direction: column;
     margin: auto;
     align-items: center;
-    margin-top: 25vh;
+    margin-top: 20vh;
     font-family: 'Arial', sans-serif;
     width: 510px;
     height: 410px;
@@ -29,7 +29,7 @@ body {
 .input-divs {
     margin-bottom: 100px;
     margin-top: 60px;
-    margin-left: 23%;
+    margin-left: 13%;
 }
 
 .input-email, 
@@ -79,12 +79,20 @@ body {
 .fa-eye-slash {
     position: absolute;
     color: white;
-    margin-left: -24px;
+    margin-left: -32px;
     margin-top: 12px;
     cursor: pointer;
-    visibility: hidden;
 }
 /*Fim Icons*/
+
+.forgot-password {
+    margin-left: 16px;
+    margin-bottom: 90px;
+}
+
+.forgot-password:hover {
+    color: black;
+}
 
 /*Fim Inputs Section*/
 
@@ -109,12 +117,5 @@ body {
 .extra-buttons {
     display: flex;
     gap: 180px;
-}
-
-.forgot-password {
-    margin-bottom: 90px;
-}
-
-.forgot-password:hover {
-    color: black;
+    margin-top: 40px;
 }

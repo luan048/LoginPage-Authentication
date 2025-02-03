@@ -24,12 +24,9 @@ function App() {
             
                     <div className="div-input-password">
                         <span className="span-icon-password"><i className="fa-solid fa-lock"></i></span>
+
                         <input className="input-password" type={isVisible ? "text" : "password"} placeholder="Senha"/>
-                        <i
-                            className={`fa-solid ${isVisible ? "fa-eye" : "fa-eye-slash"}`}
-                            onClick={toggleVisibility}
-                            style={{cursor: "pointer", marginLeft: "8px"}}
-                        ></i>
+                        <i className={`fa-solid ${isVisible ? "fa-eye" : "fa-eye-slash"}`} onClick={toggleVisibility}></i>
                     </div>
 
                 </div>
