@@ -19,7 +19,6 @@ export class UserController {
         try {
             const user = this.service.register(name, email, password)
             return res.status(200).json({
-                id: user.id,
                 name: user.name,
                 email: user.email
             })
