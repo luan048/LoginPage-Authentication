@@ -1,0 +1,27 @@
+.general-div-signin {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    margin-top: -8vh;
+    font-family: 'Arial', sans-serif;
+    width: 510px;
+    height: 410px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.entrar {
+    font-size: 30px;
+    color: white;
+}
+
+.extra-buttons-signin {
+    display: flex;
+    gap: 180px;
+    margin-top: 148px;
+}
