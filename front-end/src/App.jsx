@@ -1,23 +1,28 @@
 import React from "react";
 import {useState} from 'react'
-import { Link } from "react-router-dom"; 
+import { Link, useNavigate } from "react-router-dom"; 
 
 import './App.css'
 
 function App() {
 
+    // Para navegar entre as rotas
+    const navigate = useNavigate()
+    //
     const [isVisible, setIsVisible] = useState(false)
 
     function toggleVisibility() {
-        setIsVisible(!isVisible)
+        setIsVisible(!isVisible) // Valor do setIsVisible será sempre o contrário do valor original de isVisible
     }
 
     return (
         <>
             <div className="general-div">
-                <p className="entrar">Entrar</p>
+                <p className="cadastrar">Cadastrar</p>
 
                 <div className="input-divs">
+
+                    {/* FALTA O INPUT PARA NAME */}
 
                     <div className="div-input-email">
                         <span className="span-icon-user"><i className="fa-regular fa-user" /></span><input className="input-email" type="text" placeholder="Email"/>
@@ -37,10 +42,10 @@ function App() {
                 {/* Fim Link Forget-Password */}
 
                 <div className="extra-buttons">
-                    <button className="signup-button">Cadastrar</button>
+                    <button className="signup-button">Cadastrar</button>  {/* AINDA SEM FUNCIONALIDADE DE ROTAS*/}
 
                     {/* Button to Sign In */}
-                    <button className="login-button"><Link to={"/signup"} style={{textDecoration: "none", color: "inherit"}}>Faça Login</Link></button>
+                    <button className="login-button" onClick={() => navigate("/signin")}>Faça Login</button>
                     {/* Fim Button to Sign In */}
                 </div>
             </div>

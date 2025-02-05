@@ -23,7 +23,7 @@ body {
     padding: 20px;
 }
 
-.entrar {
+.cadastrar {
     font-size: 30px;
     color: white;
 }
@@ -99,7 +99,8 @@ body {
 /*Fim Inputs Section*/
 
 .login-button,
-.signup-button {
+.signup-button,
+.return-button {
     width: 200px;
     height: 50px;
     cursor: pointer;

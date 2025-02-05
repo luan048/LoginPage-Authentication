@@ -6,7 +6,7 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 // Routes
 import App from "./App.jsx";
 import ForgetPass from "../ForgetPass/ForgetPass.jsx";
-import SignUp from "../SignUp/SignUp.jsx";
+import SignIn from "../SignIn/SignIn.jsx";
 // Fim Routes
 
 const routers = createBrowserRouter([
@@ -16,14 +16,14 @@ const routers = createBrowserRouter([
     },
 
     {
-        path: "/forgetpass",
-        element: <ForgetPass />
+        path: "/signin",
+        element: <SignIn />
     },
 
     {
-        path: "/signup",
-        element: <SignUp />
-    }
+        path: "/forgetpass",
+        element: <ForgetPass />
+    },
 ])
 
 createRoot(document.getElementById('root')).render(
