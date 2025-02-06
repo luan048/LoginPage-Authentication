@@ -46,10 +46,10 @@ export class UserController {
     }
 
     updatePassword(req, res) {
-        const {id, email, lastPassword, newPassword} = req.body
+        const {email, lastPassword, newPassword} = req.body
 
         try {
-            this.service.updatePassword(id, email, lastPassword, newPassword)
+            this.service.updatePassword(email, lastPassword, newPassword)
             return res.status(200).json({message: 'Update Sucessfully'})
         }
         catch(error) {
