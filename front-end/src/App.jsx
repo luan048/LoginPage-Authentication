@@ -22,10 +22,12 @@ function App() {
 
                 <div className="input-divs">
 
-                    {/* FALTA O INPUT PARA NAME */}
+                    <div className="div-input-name">
+                        <span className="span-icon-name"><i className="fa-regular fa-user"></i></span><input className="input-name" type="text" placeholder="Name"/>
+                    </div>
 
                     <div className="div-input-email">
-                        <span className="span-icon-user"><i className="fa-regular fa-user" /></span><input className="input-email" type="text" placeholder="Email"/>
+                        <span className="span-icon-user"><i class="fa-regular fa-envelope" /></span><input className="input-email" type="text" placeholder="Email"/>
                     </div>
             
                     <div className="div-input-password">
