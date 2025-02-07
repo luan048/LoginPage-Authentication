@@ -1,6 +1,6 @@
 import React from "react";
 import {useState} from 'react'
-import { Link, useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom"; 
 
 import './App.css'
 
@@ -39,16 +39,15 @@ function App() {
 
                 </div>
 
-                {/* Link Forget-Password */}
-                <Link className="forgot-password" to={"/forgetpass"}>Esqueci Senha</Link>
-                {/* Fim Link Forget-Password */}
-
                 <div className="extra-buttons">
-                    <button className="signup-button">Cadastrar</button>  {/* AINDA SEM FUNCIONALIDADE DE ROTAS*/}
+                    <button className="signup-button" onClick={() => navigate("/")}>Faça Login</button>
 
-                    {/* Button to Sign In */}
-                    <button className="login-button" onClick={() => navigate("/signin")}>Faça Login</button>
-                    {/* Fim Button to Sign In */}
+                    {/* AQUI SERÁ UMA FUNÇÃO CONECTADA COM A API PARA CADASTRAR NOVOS USUÁRIOS */}
+
+                    {/* Button to SignUp */}
+                    <button className="login-button">Cadastre-se</button> {/*AINDA SEM FUNÇÕES */}
+                    {/* END Button to SignUp */}
+
                 </div>
             </div>
         </>

@@ -92,14 +92,6 @@ body {
 }
 /*Fim Icons*/
 
-.forgot-password {
-    margin-bottom: 90px;
-}
-
-.forgot-password:hover {
-    color: black;
-}
-
 /*Fim Inputs Section*/
 
 .login-button,
@@ -124,5 +116,5 @@ body {
 .extra-buttons {
     display: flex;
     gap: 180px;
-    margin-top: 40px;
+    margin-top: 145px;
 }
