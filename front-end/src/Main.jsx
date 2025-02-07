@@ -12,12 +12,12 @@ import SignIn from "../SignIn/SignIn.jsx";
 const routers = createBrowserRouter([
     {
         path: "/",
-        element: <App />
+        element: <SignIn />
     },
 
     {
         path: "/signin",
-        element: <SignIn />
+        element: <App />
     },
 
     {
