@@ -20,8 +20,14 @@
     color: white;
 }
 
+.input-divs-signin {
+    margin-bottom: 45px;
+    margin-top: 70px;
+    margin-left: 13%;
+}
+
 .extra-buttons-signin {
     display: flex;
     gap: 180px;
-    margin-top: 148px;
+    margin-top: 80px;
 }

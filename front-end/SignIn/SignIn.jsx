@@ -1,14 +1,12 @@
 import React from "react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import './SignIn.css'
 
 function SignIn() {
 
-    //PARA NEVEGAR ENTRE AS ROTAS
     const navigate = useNavigate()
-    //
 
     const [isVisible, setIsVisible] = useState(false)
 
@@ -20,7 +18,7 @@ function SignIn() {
         <div className="general-div-signin">
             <p className="entrar">Entrar</p>
 
-            <div className="input-divs">
+            <div className="input-divs-signin">
 
                 <div className="div-input-email">
                     <span className="span-icon-user"><i className="fa-regular fa-user" /></span><input className="input-email" type="text" placeholder="Email" />
@@ -35,8 +33,12 @@ function SignIn() {
 
             </div>
 
+            {/* Link Forget-Password */}
+            <Link className="forgot-password" to={"/forgetpass"}>Esqueci Senha</Link>
+            {/* Fim Link Forget-Password */}
+
             <div className="extra-buttons-signin">
-                <button className="return-button" onClick={() => navigate("/")}>Voltar</button>
+                <button className="signup-button" onClick={() => navigate("/signup")}>Cadastre-se</button>
 
                 {/* Button to Login */}
                 <button className="login-button">Faça Login</button> {/* AINDA SEM FUNCIONALIDADE DE ROTAS */}
