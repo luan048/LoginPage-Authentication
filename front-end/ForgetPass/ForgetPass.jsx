@@ -25,6 +25,9 @@ function ForgetPass() {
             </div>
 
             <div className="div-button-fgpass">
+                {/* ADICIONAR FUNÇÃO CONECTADA COM API PARA NEW PASSWORD */}
+
+                {/* BUTTON TO NEW PASSWORD*/}
                 <button className="button-fgpass">Redefinir Senha</button>
             </div>
         </div>

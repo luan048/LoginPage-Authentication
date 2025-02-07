@@ -40,9 +40,12 @@ function SignIn() {
             <div className="extra-buttons-signin">
                 <button className="signup-button" onClick={() => navigate("/signup")}>Cadastre-se</button>
 
+                {/* AQUI SERÁ UMA FUNÇÃO CONECTADA COM A API PARA LOGIN DE USUÁRIOS*/}
+
                 {/* Button to Login */}
-                <button className="login-button">Faça Login</button> {/* AINDA SEM FUNCIONALIDADE DE ROTAS */}
-                {/* Fim Button to Login */}
+                <button className="login-button">Faça Login</button> {/* AINDA SEM FUNCIONALIDADES */}
+                {/* END Button to Login */}
+                
             </div>
         </div>
     )

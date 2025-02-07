@@ -26,6 +26,14 @@
     margin-left: 13%;
 }
 
+.forgot-password {
+    margin-bottom: 90px;
+}
+
+.forgot-password:hover {
+    color: black;
+}
+
 .extra-buttons-signin {
     display: flex;
     gap: 180px;
