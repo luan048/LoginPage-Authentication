@@ -1,7 +1,14 @@
 import React from "react";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 import './ForgetPass.css'
+
+// CONEXÃO COM API
+const api = axios.create({
+    baseURL: 'http://localhost:8000'
+})
+//
 
 function ForgetPass() {
 
